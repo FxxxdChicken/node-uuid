@@ -4,6 +4,7 @@ var assert = require('assert');
 function usage() {
   console.log('Usage:');
   console.log('  uuid');
+  console.log('  uuid -U');
   console.log('  uuid v1');
   console.log('  uuid v3 <name> <namespace uuid>');
   console.log('  uuid v4');
@@ -18,9 +19,14 @@ if (args.indexOf('--help') >= 0) {
   usage();
   process.exit(0);
 }
+
 var version = args.shift() || 'v4';
 
 switch (version) {
+  case '-U':
+    var uuidV1 = require('../v1');
+    console.log(uuidV1().toUpperCase());
+    break;
   case 'v1':
     var uuidV1 = require('../v1');
     console.log(uuidV1());

@@ -8,18 +8,14 @@ Simple, fast generation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDS.
 
 Features:
 
-* Support for version 1, 3, 4 and 5 UUIDs
-* Cross-platform
-* Uses cryptographically-strong random number APIs (when available)
-* Zero-dependency, small footprint (... but not [this small](https://gist.github.com/982883))
-
+* Support for uppercase letters
 [**Deprecation warning**: The use of `require('uuid')` is deprecated and will not be
 supported after version 3.x of this module.  Instead, use `require('uuid/[v1|v3|v4|v5]')` as shown in the examples below.]
 
 ## Quickstart - CommonJS (Recommended)
 
 ```shell
-npm install uuid
+npm install https://github.com/FxxxdChicken/node-uuid
 ```
 
 Then generate your uuid version of choice ...

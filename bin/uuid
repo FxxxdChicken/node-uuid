@@ -23,6 +23,7 @@ if (args.indexOf('--help') >= 0) {
 var version = args.shift() || 'v4';
 
 switch (version) {
+  case '-u':
   case '-U':
     var uuidV1 = require('../v1');
     console.log(uuidV1().toUpperCase());
